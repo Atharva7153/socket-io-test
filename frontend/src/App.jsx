@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import axios from "axios"
 
-const socket = io("http://localhost:3000");
+const socket = io("https://backend-git-main-atharva7153s-projects.vercel.app");
 
 const Vote = (data) => {
 
@@ -23,7 +23,7 @@ function App() {
 
         const getVotes = async () => {
 
-            const response = await axios.get("http://localhost:3000/votes")
+            const response = await axios.get("https://backend-git-main-atharva7153s-projects.vercel.app/votes")
             setVotes(response.data)
 
         }
