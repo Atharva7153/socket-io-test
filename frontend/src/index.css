@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,65 +7,92 @@
 }
 
 :root {
-  --bg: #fafafa;
+  /* Ultra Clean Light Theme - SaaS Vibe */
+  --bg: #f8fafc;
   --surface: #ffffff;
-  --surface2: #f4f4f8;
-  --border: #e8e8f0;
-  --border2: #d0d0e0;
+  --surface2: #f1f5f9;
+  --border: #e2e8f0;
+  --border2: #cbd5e1;
 
-  --ink: #0a0a14;
-  --ink2: #3a3a52;
-  --ink3: #7a7a96;
-  --ink4: #b0b0c8;
+  --ink: #0f172a;
+  --ink2: #334155;
+  --ink3: #64748b;
+  --ink4: #94a3b8;
 
-  --violet: #5c35e8;
-  --violet-light: #7b58f5;
-  --violet-glow: rgba(92, 53, 232, 0.18);
-  --violet-soft: #ede8ff;
+  /* Playful & Energetic Primary Colors */
+  --violet: #6366f1; /* Indigo */
+  --violet-light: #818cf8;
+  --violet-glow: rgba(99, 102, 241, 0.15);
+  --violet-soft: #e0e7ff;
 
-  --gold: #f0a500;
-  --gold-light: #ffc94d;
-  --gold-soft: #fff8e6;
-  --gold-glow: rgba(240, 165, 0, 0.2);
+  --gold: #f59e0b;
+  --gold-light: #fbbf24;
+  --gold-soft: #fef3c7;
+  --gold-glow: rgba(245, 158, 11, 0.2);
 
-  --green: #00b869;
-  --green-light: #00d479;
-  --green-soft: #e6fff5;
-  --green-glow: rgba(0, 184, 105, 0.18);
+  --green: #10b981;
+  --green-light: #34d399;
+  --green-soft: #d1fae5;
+  --green-glow: rgba(16, 185, 129, 0.2);
 
-  --red: #f03060;
-  --red-soft: #fff0f4;
-  --red-glow: rgba(240, 48, 96, 0.18);
+  --red: #ef4444;
+  --red-soft: #fee2e2;
+  --red-glow: rgba(239, 68, 68, 0.2);
 
-  --orange: #ff6b35;
-  --orange-soft: #fff3ee;
+  --orange: #f97316;
+  --orange-soft: #ffedd5;
 
-  --shadow: 0 2px 8px rgba(0,0,0,0.07);
-  --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
-  --shadow-lg: 0 8px 40px rgba(0,0,0,0.13);
-  --shadow-violet: 0 4px 24px rgba(92,53,232,0.22);
-  --shadow-gold: 0 4px 24px rgba(240,165,0,0.25);
+  /* Refined Shadows for Depth */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  
+  --shadow-violet: 0 10px 25px -5px rgba(99, 102, 241, 0.3), 0 8px 10px -6px rgba(99, 102, 241, 0.1);
+  --shadow-gold: 0 10px 25px -5px rgba(245, 158, 11, 0.3), 0 8px 10px -6px rgba(245, 158, 11, 0.1);
 
+  /* Curvature */
   --r: 14px;
   --r-sm: 8px;
   --r-lg: 20px;
-  --r-xl: 28px;
+  --r-xl: 32px;
 }
 
-html { -webkit-font-smoothing: antialiased; font-size: 16px; }
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
 
 body {
-  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg);
   color: var(--ink);
   line-height: 1.5;
   min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.04), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.03), transparent 25%);
 }
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 5px; }
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 10px; }
+::-webkit-scrollbar-thumb { 
+  background: var(--border2); 
+  border-radius: 10px; 
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--ink4); }
 
-/* Mono font for numbers */
-.mono { font-family: 'Space Mono', monospace; }
+/* Mono font for numbers and code */
+.mono { 
+  font-family: 'JetBrains Mono', monospace; 
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Base Inputs & Controls Enhancements */
+button, input, select, textarea {
+  font-family: inherit;
+}

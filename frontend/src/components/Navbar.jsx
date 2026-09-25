@@ -13,8 +13,7 @@ export default function Navbar({ gameState, currentTeam, currentMember, isAdmin,
       <div className="navbar-inner">
         {/* Brand */}
         <div className="brand">
-          <div className="brand-icon">⚡</div>
-          <span className="brand-name">DSA <em>Auction</em></span>
+          <span className="brand-name"><em>Auction</em></span>
         </div>
 
         {/* Center pills */}

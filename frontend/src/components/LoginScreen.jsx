@@ -58,9 +58,8 @@ export default function LoginScreen({ onTeamLoginSuccess, onAdminLoginSuccess, l
       <div className="login-wrap">
         {/* Hero */}
         <div className="login-hero">
-          <span className="login-game-logo">⚡</span>
           <div className="login-game-name">
-            DSA <span>Auction</span> Arena
+            <span>Auction</span> Arena
           </div>
           <div className="login-tagline">
             Bid on problems · Solve to earn coins · Highest score wins
