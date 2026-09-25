@@ -5,15 +5,27 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "nodemon server.js"
+    "test:flow": "node test_game_flow.js",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "cloudflared": "^0.7.3",
+    "cors": "^2.8.5",
+    "dotenv": "^18.0.3",
     "express": "^5.2.1",
+    "mongoose": "^9.10.2",
     "nodemon": "^3.1.14",
     "socket.io": "^4.8.3"
+  },
+  "allowScripts": {
+    "cloudflared@0.7.3": true
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.3"
   }
 }
